@@ -1,13 +1,16 @@
-/*#mainText {
-	font-size: 50px;
+#mainText {
 	margin: 0 auto;
-	width: 450px;
+	font-size: 20px;
+	border: 1px solid blue;
+	width: 600px;
+	text-align: center;
 }
-*/
+
 #countdown {
 	font-size: 20px;
-	width: 200px;
+	width: 600px;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #startButton {
@@ -20,6 +23,7 @@
 
 main {
 	width: 600px;
+	margin: 0px auto;
 	border: 1px solid red;
 
 }
@@ -27,11 +31,15 @@ main {
 main p {
 	text-align: center;
 	font-size: 25px;
+	margin: 0px auto;
+
 }
 
 p.question {
 	text-align: center;
 	font-size: 25px;
+	margin: 0px auto;
+
 }
 
 main li {
@@ -40,7 +48,5 @@ main li {
 }
 
 .answer {
-	margin: 0 auto;
-	font-size: 20px;
-	border: 1px solid blue;
+
 }
