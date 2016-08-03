@@ -103,51 +103,65 @@ $("#startButton").click(timer);
 		$("#startButton").remove();
 			$("#mainText").html(
 					"<p class='question'>" + questionsObj.question1.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" + "  " + questionsObj.question1.answer1 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" + "  " +  questionsObj.question1.answerCorrect +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" + "  " +  questionsObj.question1.answer3 +  "  " +
+					"</form>" +
 
 					"<br>" +
 
 					"<p class='question'>" + questionsObj.question2.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question2.answer1 + "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question2.answer2 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question2.answerCorrect +  "  " +					
+					"</form>" +
 
 					"<br>" +
 
 					"<p class='question'>" + questionsObj.question3.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question3.answerCorrect +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question3.answer2 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question3.answer3 +  "  " +
+					"</form>" +
 
 					"<br>" +
 
 					"<p class='question'>" + questionsObj.question4.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question4.answerCorrect +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" + questionsObj.question4.answer2 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" + questionsObj.question4.answer3 +  "  " +
+					"</form>" +
 
 					"<br>" +
 
 					"<p class='question'>" + questionsObj.question5.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question5.answerCorrect +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question5.answer2 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question5.answer3 +  "  " +
+					"</form>" +
 
 					"<br>" +
 
 					"<p class='question'>" + questionsObj.question6.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question6.answer1 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question6.answerCorrect +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question6.answer3 +  "  " +
+					"</form>" +
 
 					"<br>" +
 
 					"<p class='question'>" + questionsObj.question7.tagline + "</p>" + 
+					"<form id='answerForm'>" +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answer1 +  "  " +
 					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answerCorrect +  "  " +
-					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answer3
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answer3 +
+					"</form>"
 				)
 				
 			})
@@ -160,6 +174,8 @@ var unanswered = 0;
 var userSelect;
 var correctAnswersArray = ["The Thing", "Armageddon", "Edward Scissorhands", "Ferris Bueller's Day Off",
 "I Am Legend", "Monsters, Inc.", "The Prestige"];
+
+var input = document.getElementById("answerForm");
 
 // Check if userSelect is or is not in the correctAnswersArray, then increment the values...
 // THIS DOESN"T WORK BC IT DOESN'T SAVE THE VALUE OF WHICH RADIO BUTTON WAS CLICKED
