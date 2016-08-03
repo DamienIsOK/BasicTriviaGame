@@ -162,7 +162,7 @@ var correctAnswersArray = ["The Thing", "Armageddon", "Edward Scissorhands", "Fe
 "I Am Legend", "Monsters, Inc.", "The Prestige"];
 
 // Check if userSelect is or is not in the correctAnswersArray, then increment the values...
-// THIS DOESN"T WORK. IT DOESN'T SAVE THE VALUE OF WHICH RADIO BUTTON WAS CLICKED
+// THIS DOESN"T WORK BC IT DOESN'T SAVE THE VALUE OF WHICH RADIO BUTTON WAS CLICKED
 if (correctAnswersArray.indexOf(userSelect) >= 0) {
 	correct++;
 	console.log('Correct' + userSelect);
