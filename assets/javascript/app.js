@@ -19,6 +19,7 @@ var decrement = function(){
     $('#countdown').html('<h2>Time remaining: ' + number + ' Seconds' + '</h2>');
     if (number == 0){
         stop();
+        resultsPage();
         console.log('Time is up!');
     }
 };
@@ -84,7 +85,7 @@ var questionsObj = {
 	},
  }
 
-// Start button function
+// Start button functions. Click start button to move to the quiz page
 
 startHere();
 
@@ -92,7 +93,7 @@ function startHere(){
 
 $("#startButton")
 	.hover(function(){
-		$(this).css("background-color", "blue");
+		$(this).css("background-color", "green");
 	}, function(){
 		$(this).css("background-color", "red");
 	});
@@ -153,10 +154,33 @@ $("#startButton").click(timer);
 		}
 
 
-var results = 0;
+var correct = 0;
+var incorrect = 0;
+var unanswered = 0;
 var userSelect;
-if (userSelect == 1) {
+var correctAnswersArray = ["The Thing", "Armageddon", "Edward Scissorhands", "Ferris Bueller's Day Off",
+"I Am Legend", "Monsters, Inc.", "The Prestige"];
 
+// Check if userSelect is or is not in the correctAnswersArray, then increment the values...
+// THIS DOESN"T WORK. IT DOESN'T SAVE THE VALUE OF WHICH RADIO BUTTON WAS CLICKED
+if (correctAnswersArray.indexOf(userSelect) >= 0) {
+	correct++;
+	console.log('Correct' + userSelect);
+} else if(correctAnswersArray.indexOf(userSelect) < 0) {
+	incorrect++;
+	console.log('Wrong');
+} else {
+	unanswered++;
+}
+
+// Results page. Show this page after the quiz is complete
+var resultsPage = function(){
+$("#mainText").html(
+	"<div> Correct Answers: " + correct + "</div>" +
+	"<div> Correct Answers: " + incorrect + "</div>" +
+	"<div> Correct Answers: " + unanswered + "</div>"
+
+	)
 }
 
 });
