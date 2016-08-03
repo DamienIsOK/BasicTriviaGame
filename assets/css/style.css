@@ -1,9 +1,9 @@
-#mainText {
+/*#mainText {
 	font-size: 50px;
 	margin: 0 auto;
 	width: 450px;
 }
-
+*/
 #countdown {
 	font-size: 20px;
 	width: 200px;
@@ -19,6 +19,7 @@
 }
 
 main {
+	width: 600px;
 	border: 1px solid red;
 
 }
@@ -36,4 +37,10 @@ p.question {
 main li {
 	text-align: center;
 	font-size: 30px;
+}
+
+.answer {
+	margin: 0 auto;
+	font-size: 20px;
+	border: 1px solid blue;
 }

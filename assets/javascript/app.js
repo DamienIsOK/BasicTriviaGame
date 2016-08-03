@@ -16,7 +16,7 @@ var stop = function(){
 var decrement = function(){
 	// Just logging the results to make sure it works
     console.log(number--);
-    $('#countdown').html('<h2> Seconds remaining: ' + number + '</h2>');
+    $('#countdown').html('<h2>Seconds remaining: ' + number + '</h2>');
     if (number == 0){
         stop();
         console.log('Time is up!');
@@ -97,48 +97,61 @@ $("#startButton")
 		$(this).css("background-color", "red");
 	});
 
-$("#startButton").click(function(){
-	$("main").html(
+$("#startButton").click(timer);
+	$(this).click(function(){
+		$("#startButton").remove();
+			$("#mainText").html(
 					"<p class='question'>" + questionsObj.question1.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question1.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question1.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question1.answer3 +
+					"<input class = 'answer' type='radio' name='tagline'>" + "  " + questionsObj.question1.answer1 + 
+					"<input class = 'answer' type='radio' name='tagline'>" + "  " +  questionsObj.question1.answerCorrect +
+					"<input class = 'answer' type='radio' name='tagline'>" + "  " +  questionsObj.question1.answer3 +
+
+					"<br>" +
 
 					"<p class='question'>" + questionsObj.question2.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question2.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question2.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question2.answer3 +					
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question2.answer1 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question2.answer2 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question2.answerCorrect +					
+
+					"<br>" +
 
 					"<p class='question'>" + questionsObj.question3.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question3.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question3.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question3.answer3 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question3.answerCorrect +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question3.answer2 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question3.answer3 +
+
+					"<br>" +
 
 					"<p class='question'>" + questionsObj.question4.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question4.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question4.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question4.answer3 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question4.answerCorrect +
+					"<input class = 'answer' type='radio' name='tagline'>" + questionsObj.question4.answer2 +
+					"<input class = 'answer' type='radio' name='tagline'>" + questionsObj.question4.answer3 +
+
+					"<br>" +
 
 					"<p class='question'>" + questionsObj.question5.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question5.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question5.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question5.answer3 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question5.answerCorrect +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question5.answer2 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question5.answer3 +
+
+					"<br>" +
 
 					"<p class='question'>" + questionsObj.question6.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question6.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question6.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question6.answer3 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question6.answer1 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question6.answerCorrect +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question6.answer3 +
+
+					"<br>" +
 
 					"<p class='question'>" + questionsObj.question7.tagline + "</p>" + 
-					"<input type='radio' name='tagline'>" + questionsObj.question7.answer1 +
-					"<input type='radio' name='tagline'>" + questionsObj.question7.answerCorrect +
-					"<input type='radio' name='tagline'>" + questionsObj.question7.answer3
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answer1 +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answerCorrect +
+					"<input class = 'answer' type='radio' name='tagline'>" +  "  " + questionsObj.question7.answer3
+					)
+				
 
-	
-
-		)
-})
-}
+					})
+					}
 
 
 
